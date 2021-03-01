@@ -1,0 +1,20 @@
+/target/
+*/target/
+
+#ignore idea files
+/.idea/
+*.iml
+/logs/
+
+# ignore eclipse files
+.project
+.DS_Store
+.classpath
+.settings
+.metadata
+.tern-project
+*_translate.properties
+logs/
+resources/temp.fxml
+dev.sql
+prod.sql
