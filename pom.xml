@@ -3,10 +3,40 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>org.example</groupId>
+    <groupId>com.study</groupId>
     <artifactId>spring-cloud-alibaba</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-
-
+    <modules>
+        <module>spring-boot-dubbo</module>
+    </modules>
+    <properties>
+        <study-project.version>1.0-SNAPSHOT</study-project.version>
+        <spring-cloud-dependencies.version>Greenwich.SR5</spring-cloud-dependencies.version>
+        <spring-cloud-alibaba-dependencies.version>2.1.0.RELEASE</spring-cloud-alibaba-dependencies.version>
+    </properties>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.6.RELEASE</version>
+        <relativePath></relativePath>
+    </parent>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
