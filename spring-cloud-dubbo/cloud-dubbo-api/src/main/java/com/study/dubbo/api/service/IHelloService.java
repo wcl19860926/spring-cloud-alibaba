@@ -1,4 +1,4 @@
-package com.study.service;
+package com.study.dubbo.api.service;
 
 public interface IHelloService {
 

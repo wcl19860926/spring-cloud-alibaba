@@ -8,12 +8,12 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>spring-boot-dubbo</module>
+        <module>spring-cloud-dubbo</module>
     </modules>
     <properties>
         <study-project.version>1.0-SNAPSHOT</study-project.version>
         <spring-cloud-dependencies.version>Greenwich.SR5</spring-cloud-dependencies.version>
-        <spring-cloud-alibaba-dependencies.version>2.1.0.RELEASE</spring-cloud-alibaba-dependencies.version>
+        <spring-cloud-alibaba-dependencies.version>2.2.2.RELEASE</spring-cloud-alibaba-dependencies.version>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -23,6 +23,13 @@
     </parent>
     <dependencyManagement>
         <dependencies>
+           <!-- <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot&#45;&#45;dependencies</artifactId>
+                <version>2.2.6.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
