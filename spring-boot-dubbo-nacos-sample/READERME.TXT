@@ -1,0 +1,9 @@
+本sample主要讲解如何使用Nacos作为Dubbo服务的注册中心，为Dubbo提供服务注册与发现的功能
+
+安装Nacos
+1、https://github.com/alibaba/nacos/releases  下载当前Nacos的最新版本
+2、解压进入根目录，执行mvn clean install  -U  -P release  构建之后会创建一个distribution目录。
+3、执行cd  distribution/target/nacos-server-$version/nacos/bin.
+4、执行 sh startup.sh  -m  standalone ,启动服务。
+5、服务启动后，可以通过，http://127.0.0.1:8848/nacos访问Nacose的控制台。控制台主要用于增强对服务列表，健康状态管理，服务治理，分布式配置等方面的管控能力，可以进一
+   一步帮助开发者降低管理微服务应用架构的成本。
