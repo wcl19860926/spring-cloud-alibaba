@@ -16,6 +16,8 @@
         <study-project.version>1.0-SNAPSHOT</study-project.version>
         <spring-cloud-dependencies.version>Greenwich.SR5</spring-cloud-dependencies.version>
         <spring-cloud-alibaba-dependencies.version>2.2.2.RELEASE</spring-cloud-alibaba-dependencies.version>
+        <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
+        <maven-assembly-plugin.version>3.0.0</maven-assembly-plugin.version>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -48,4 +50,30 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+   <build>
+       <plugins>
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-checkstyle-plugin</artifactId>
+               <version>${maven-checkstyle-plugin.version}</version>
+               <configuration>
+                   <configLocation>code-style/checkStyle.xml</configLocation>
+                   <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                   <encoding>UTF-8</encoding>
+                   <consoleOutput>true</consoleOutput>
+                   <failsOnError>true</failsOnError>
+                   <excludes>**/entity/**,**/test/**</excludes>
+               </configuration>
+               <executions>
+                   <execution>
+                       <id>validate</id>
+                       <phase>validate</phase>
+                       <goals>
+                           <goal>check</goal>
+                       </goals>
+                   </execution>
+               </executions>
+           </plugin>
+       </plugins>
+   </build>
 </project>

@@ -1,10 +1,8 @@
 
 安装Nacos
-1、https://github.com/alibaba/nacos/releases  下载当前Nacos的最新版本
-2、解压进入根目录，执行mvn clean install  -U  -P release  构建之后会创建一个distribution目录。
-3、执行cd  distribution/target/nacos-server-$version/nacos/bin.
-4、执行 sh startup.sh  -m  standalone ,启动服务。
-5、服务启动后，可以通过，http://127.0.0.1:8848/nacos访问Nacose的控制台。控制台主要用于增强对服务列表，健康状态管理，服务治理，分布式配置等方面的管控能力，可以进一
+1、执行cd  bin.
+2、执行 sh startup.sh  -m  standalone ,启动服务。
+3、服务启动后，可以通过，http://127.0.0.1:8848/nacos访问Nacose的控制台。控制台主要用于增强对服务列表，健康状态管理，服务治理，分布式配置等方面的管控能力，可以进一
    一步帮助开发者降低管理微服务应用架构的成本。
 
 
@@ -26,7 +24,7 @@
       在conf目录下包含以下文件。
          application.properties:Spring Boot项目默认的配置文件。
          cluster.conf.example集群配置样例文件。
-         nacos-mysql.sql：MySQL数据库脚本。Nacos支持Derby和MySQL两种持久化机制，默认采用Derby数据库。如果采用MySQL，需要运行该脚本创建数据库和表。
+         nacos-mysql.sql , schema.sql：MySQL数据库脚本。Nacos支持Derby和MySQL两种持久化机制，默认采用Derby数据库。如果采用MySQL，需要运行该脚本创建数据库和表。
          nacos-logback.xml：Nacos日志配置文件。
       配置Nacos集群需要用到cluster.conf文件，我们可以直接重命名提供的example文件，修改该配置信息如下：
          192.168.13.104：8848
