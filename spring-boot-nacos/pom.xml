@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spring-boot-nacos</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>spring-boot-nacos-config</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

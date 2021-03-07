@@ -1,0 +1,42 @@
+Actuator
+目的
+
+监控并管理应用程序
+监控：让我们去发现和了解程序的运行状况各种指标
+管理：比如说通过Actuator去做一个shutdown功能，通过访问一个特定的url去操作，默认是不开启的，另外 还可以在运行的过程中 对日志进行调整
+访问方式
+HTTP
+JMX
+默认 会把更多的 Actuator 暴露在JMX上面
+依赖
+spring-boot-starter-actuator
+
+
+如何访问 Actuator Endpoint
+HTTP 访问
+
+/actuator/<id >
+端口与路径
+
+management.server.address=
+Actuator Endpoint 发布的地址
+management.server.port=
+Actuator Endpoint 发布的端口号
+management.endpoints.web.base-path=/actuator
+自定义端口
+management.endpoints.web.path-mapping.<id>=路径
+修改端点的访问路径(映射)，端点默认使用的是它的 值
+开启 Endpoint
+
+management.endpoint.<id>.enabled=true
+开启名为id的 Endpoint
+management.endpoints.enabled-by-default=false
+端点启用是选择性加入而不是选择性排除。表示禁用了所有端点
+暴露 Endpoint
+management.endpoints.jmx.exposure.exclude=
+jmx方式排除需要公开的端点
+management.endpoints.jmx.exposure.include=*
+jmx方式包含需要公开的端点
+management.endpoints.web.exposure.exclude=
+http方式排除需要公开的端点
+management.endpoints.web.exposure.include=info, health

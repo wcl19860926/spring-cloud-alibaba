@@ -75,6 +75,63 @@
                    </execution>
                </executions>
            </plugin>
+           <plugin>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-maven-plugin</artifactId>
+           </plugin>
+           <!-- 替换 配置文件中 @ss@ 样式字符-->
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-resources-plugin</artifactId>
+               <configuration>
+                   <encoding>UTF-8</encoding>
+                   <delimiters>
+                       <delimiter>@</delimiter>
+                   </delimiters>
+                   <useDefaultDelimiters>false</useDefaultDelimiters>
+               </configuration>
+           </plugin>
        </plugins>
+       <resources>
+           <resource>
+               <directory>src/main/resources</directory>
+               <!-- 替换开关-->
+               <filtering>true</filtering>
+           </resource>
+       </resources>
    </build>
+
+
+    <profiles>
+        <profile>
+            <!-- 本地开发环境 -->
+            <id>local</id>
+            <properties>
+                <env>local</env>
+                <addr>192.168.1.198:8848</addr>
+                <space>4ca4defb-a712-408b-8b1a-301774637d79</space>
+            </properties>
+            <activation>
+                <!-- 设置默认激活这个配置 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <!-- 发布环境 -->
+            <id>prod</id>
+            <properties>
+                <env>prod</env>
+                <addr>192.168.1.122:8848</addr>
+                <space>4ca4defb-a712-408b-8b1a-89878972a</space>
+            </properties>
+        </profile>
+        <profile>
+            <!-- 测试环境 -->
+            <id>test</id>
+            <properties>
+                <env>test</env>
+            </properties>
+        </profile>
+    </profiles>
+
 </project>
