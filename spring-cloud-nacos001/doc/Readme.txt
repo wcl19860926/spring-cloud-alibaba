@@ -1,4 +1,5 @@
 
+
 安装Nacos
 1、执行cd  bin.
 2、执行 sh startup.sh  -m  standalone ,启动服务。

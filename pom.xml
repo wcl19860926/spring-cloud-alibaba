@@ -11,6 +11,7 @@
         <module>spring-cloud-dubbo</module>
         <module>spring-cloud-nacos001</module>
         <module>spring-boot-dubbo-nacos-sample</module>
+        <module>spring-boot-nacos</module>
     </modules>
     <properties>
         <study-project.version>1.0-SNAPSHOT</study-project.version>
