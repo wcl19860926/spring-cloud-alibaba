@@ -13,6 +13,7 @@
         <module>spring-boot-dubbo-nacos-sample</module>
         <module>spring-boot-nacos</module>
         <module>reactor</module>
+        <module>alibaba-sentinel-demo0</module>
     </modules>
     <properties>
         <study-project.version>1.0-SNAPSHOT</study-project.version>

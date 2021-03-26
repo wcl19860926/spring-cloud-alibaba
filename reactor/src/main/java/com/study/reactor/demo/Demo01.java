@@ -5,12 +5,9 @@ import reactor.core.publisher.Flux;
 public class Demo01 {
 
     public static void main(String[] args) {
-        Flux.just("A","B","C").subscribe(item-> System.out.println(item));
-        Flux.create(fluxSink -> {
-            fluxSink.
-            fluxSink.complete();
+       Integer   a   =  Integer.valueOf(12);
+       Integer   b = Integer.valueOf(12);
+      System.out.println(a==b);
 
-
-        }).subscribe(System.out::println);
     }
 }
