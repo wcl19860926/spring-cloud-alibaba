@@ -23,3 +23,9 @@
    3、异常数量：和异常比例类似，当某个方法在指定时间窗口内获得的异常数量超过阈值时会触发熔断。
 
 
+Sentinel中文文档
+
+https://github.com/alibaba/Sentinel/wiki/%E4%BB%8B%E7%BB%8D
+
+https://github.com/alibaba/spring-cloud-alibaba/wiki/Sentinel
+
