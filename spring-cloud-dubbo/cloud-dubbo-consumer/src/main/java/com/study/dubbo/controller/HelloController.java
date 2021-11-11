@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @Reference(url= "dubbo://192.168.2.147:20880/com.study.dubbo.api.service.IHelloService")
+    @Reference(url = "dubbo://192.168.2.147:20880/com.study.dubbo.api.service.IHelloService")
     private IHelloService  iHelloService;
 
     @GetMapping("/say")
-    public  String sayHello(){
+    public  String sayHello() {
         return  iHelloService.sayHello("Mic");
     }
 }

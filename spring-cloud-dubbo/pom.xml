@@ -11,6 +11,9 @@
 
     <artifactId>spring-cloud-dubbo</artifactId>
     <packaging>pom</packaging>
+
+
+
     <modules>
         <module>cloud-dubbo-api</module>
         <module>cloud-dubbo-provider</module>
