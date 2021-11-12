@@ -1,8 +1,0 @@
-{
-  "properties": [
-    {
-      "name": "nacos.config.server-addr",
-      "type": "java.lang.String",
-      "description": "Description for nacos.config.server-addr."
-  }
-] }
